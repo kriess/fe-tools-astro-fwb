@@ -11,13 +11,19 @@ You need to view your dev build at `http://dev.nextgenstats.nfl.com:8080/`. The 
 ```bash
 # build for dev
 yarn install
+```
 
+```bash
 # run in dev
 yarn dev
+```
 
+```bash
 # build for production
 yarn build
+```
 
+```bash
 # run in production mode
 yarn st
 ```
