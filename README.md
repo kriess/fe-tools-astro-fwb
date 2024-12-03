@@ -25,7 +25,7 @@ yarn build
 
 ```bash
 # run in production mode
-yarn st
+yarn start
 ```
 
 ## URLs
