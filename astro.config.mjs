@@ -10,12 +10,14 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 // https://astro.build/config
 export default defineConfig({
+	// update these values based on env
+	site: `http://dev.nextgenstats.nfl.com:${DEV_PORT}`,
+	base: undefined, // this will set a base url to every url path
+
 	output: 'server',
 	adapter: node({
 		mode: 'standalone',
 	}),
-	/* Like Vercel, Netlify,… Mimicking for dev. server */
-	// trailingSlash: 'always',
 
 	server: {
 		/* Dev. server only */
