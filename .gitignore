@@ -23,3 +23,6 @@ pnpm-debug.log*
 
 # misc.
 .dev*
+.idea/
+kubernetes/*.d.ts
+kubernetes/*.js
