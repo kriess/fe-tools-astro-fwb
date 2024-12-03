@@ -1,8 +1,8 @@
 ---
 import pkg from '../../package.json' assert { type: 'json' };
-import { url } from '../lib/data.js';
+import { url } from '~/lib/data.js';
 
-import { SITE_TITLE } from './constants.js';
+import { SITE_TITLE } from '~/app/constants.js';
 
 const { class: clazz } = Astro.props;
 ---
@@ -23,12 +23,6 @@ const { class: clazz } = Astro.props;
 			type="application/xml"
 			href={url('sitemap-index.xml')}
 		/>
-
-		<meta
-			name="author"
-			content="Julian Cataldo, Zoltán Szőgyényi, Robert Tanislav"
-		/>
-		<meta name="copyright" content="MIT" />
 
 		<script is:inline>
 			if (
@@ -58,7 +52,6 @@ const { class: clazz } = Astro.props;
 
 <script>
 	import 'flowbite';
-	// import 'flowbite/dist/datepicker.js';
 </script>
 
 <style is:global>

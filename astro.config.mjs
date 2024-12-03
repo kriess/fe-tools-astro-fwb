@@ -10,14 +10,16 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 // https://astro.build/config
 export default defineConfig({
-	// update these values based on env
-	site: `http://dev.nextgenstats.nfl.com:${DEV_PORT}`,
-	base: undefined, // this will set a base url to every url path
-
-	output: 'server',
 	adapter: node({
 		mode: 'standalone',
 	}),
+
+	// update these values based on env
+	base: undefined, // this will set a base url to every url path
+
+	integrations: [sitemap(), tailwind()],
+
+	output: 'server',
 
 	server: {
 		/* Dev. server only */
@@ -25,11 +27,8 @@ export default defineConfig({
 		host: true,
 	},
 
-	integrations: [
-		//
-		sitemap(),
-		tailwind(),
-	],
+	// update these values based on env
+	site: `http://dev.nextgenstats.nfl.com:${DEV_PORT}`,
 
 	vite: {
 		base: '',

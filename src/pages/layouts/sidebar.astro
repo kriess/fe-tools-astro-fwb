@@ -1,8 +1,9 @@
 ---
-import LayoutSidebar from '../../app/LayoutSidebar.astro';
-import DashBoard from '../../modules/DashBoard.astro';
+import LayoutSidebar from '~/layouts/LayoutSidebar.astro';
+import DashBoard from '~/modules/DashBoard.astro';
 ---
 
 <LayoutSidebar>
+	<p>RIESS = {import.meta.env.PUBLIC_POKEAPI}</p>
 	<DashBoard />
 </LayoutSidebar>
